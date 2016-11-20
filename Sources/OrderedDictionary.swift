@@ -52,4 +52,9 @@ public class OrderedDictionary<Key: Hashable, Value> {
         }
         return nil
     }
+    
+    public func removeAll(keepingCapacity: Bool) {
+        valuesByKey.removeAll(keepingCapacity: keepingCapacity)
+        orderedKeys.removeAll(keepingCapacity: keepingCapacity)
+    }
 }
